@@ -61,17 +61,15 @@ const YearStat = ({
   return (
     <div className="cursor-pointer" onClick={() => onClick(year)}>
       <section {...eventHandlers}>
-        <Stat value={year} description=" Journey" />
-        <Stat value={runs.length} description=" Runs" />
+        <Stat value={year} description=" 跑步历程" />
+        <Stat value={runs.length} description=" 跑步次数" />
         <Stat value={sumDistance} description=" KM" />
         {SHOW_ELEVATION_GAIN && (
           <Stat value={sumElevationGainStr} description=" Elevation Gain" />
         )}
-        <Stat value={avgPace} description=" Avg Pace" />
-        <Stat value={`${streak} day`} description=" Streak" />
-        {hasHeartRate && (
-          <Stat value={avgHeartRate} description=" Avg Heart Rate" />
-        )}
+        <Stat value={avgPace} description=" 平均配速" />
+        <Stat value={`${streak} 天`} description=" 连续跑步" />
+        {hasHeartRate && <Stat value={avgHeartRate} description=" 平均心率" />}
       </section>
       {year !== 'Total' && hovered && (
         <Suspense fallback="loading...">

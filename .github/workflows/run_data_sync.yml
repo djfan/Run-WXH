@@ -148,7 +148,7 @@ jobs:
       - name: Run sync Garmin CN script
         if: env.RUN_TYPE == 'garmin_cn'
         run: |
-          python run_page/garmin_sync.py --is-cn
+          python run_page/garmin_sync.py --is-cn --only-run
         env:
           GARMIN_SECRET_STRING: ${{ secrets.GARMIN_SECRET_STRING_CN }}
         # make garmin secret string 'python run_page/get_garmin_secret.py ${email} ${password} --is-cn'

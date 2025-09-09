@@ -254,7 +254,9 @@ const ActivityList: React.FC = () => {
   useEffect(() => {
     // Filter activities with GPS tracks first
     const activitiesWithTracks = filterActivitiesWithTracks(activities);
-    const sportTypeSet = new Set(activitiesWithTracks.map((activity) => activity.type));
+    const sportTypeSet = new Set(
+      activitiesWithTracks.map((activity) => activity.type)
+    );
     if (sportTypeSet.has('Run')) {
       sportTypeSet.delete('Run');
       sportTypeSet.add('running');
@@ -274,15 +276,15 @@ const ActivityList: React.FC = () => {
 
   const getDisplayName = (type: string): string => {
     const typeMap: { [key: string]: string } = {
-      'all': '全部',
-      'running': '跑步',
-      'walking': '步行',
-      'cycling': '骑行',
-      'hiking': '徒步',
-      'Hike': '徒步',
-      'Unknown': '未知',
-      'swimming': '游泳',
-      'skiing': '滑雪',
+      all: '全部',
+      running: '跑步',
+      walking: '步行',
+      cycling: '骑行',
+      hiking: '徒步',
+      Hike: '徒步',
+      Unknown: '未知',
+      swimming: '游泳',
+      skiing: '滑雪',
     };
     return typeMap[type] || type;
   };
@@ -307,7 +309,9 @@ const ActivityList: React.FC = () => {
     sportType: string
   ): ActivityGroups => {
     // Filter activities with GPS tracks first
-    const activitiesWithTracks = filterActivitiesWithTracks(activities as Activity[]);
+    const activitiesWithTracks = filterActivitiesWithTracks(
+      activities as Activity[]
+    );
     return activitiesWithTracks
       .filter((activity) => {
         if (sportType === 'all') {

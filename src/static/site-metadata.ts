@@ -15,7 +15,7 @@ const getBasePath = () => {
 };
 
 const data: ISiteMetadataResult = {
-  siteTitle: "i自在 跑步主页",
+  siteTitle: 'i自在 跑步主页',
   siteUrl: '',
   logo: './assets/logo.jpg',
   description: 'i自在的个人跑步记录网站',

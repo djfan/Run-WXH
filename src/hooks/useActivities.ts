@@ -1,5 +1,9 @@
 import { useMemo } from 'react';
-import { locationForRun, titleForRun, filterActivitiesWithTracks } from '@/utils/utils';
+import {
+  locationForRun,
+  titleForRun,
+  filterActivitiesWithTracks,
+} from '@/utils/utils';
 import activities from '@/static/activities.json';
 
 // standardize country names for consistency between mapbox and activities data

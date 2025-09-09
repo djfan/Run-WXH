@@ -460,10 +460,7 @@ const RunMap = ({
         </Source>
       )}
       {isSingleRun && markerPosition && (
-        <RunMarker
-          longitude={markerPosition[0]}
-          latitude={markerPosition[1]}
-        />
+        <RunMarker longitude={markerPosition[0]} latitude={markerPosition[1]} />
       )}
       <span className={styles.runTitle}>{title}</span>
       <FullscreenControl style={fullscreenButton} />

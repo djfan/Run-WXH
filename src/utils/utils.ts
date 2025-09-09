@@ -484,7 +484,11 @@ const getMapTheme = (): string => {
 
 // Filter activities with GPS tracks (exclude activities without summary_polyline)
 const filterActivitiesWithTracks = (activities: Activity[]): Activity[] => {
-  return activities.filter(activity => activity.summary_polyline !== null && activity.summary_polyline !== undefined);
+  return activities.filter(
+    (activity) =>
+      activity.summary_polyline !== null &&
+      activity.summary_polyline !== undefined
+  );
 };
 
 export {
