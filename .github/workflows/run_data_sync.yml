@@ -35,7 +35,7 @@ env:
   ATHLETE: i自在
   TITLE: i自在
   MIN_GRID_DISTANCE: 1 # change min distance here
-  TITLE_GRID: Over 5km Runs # also here
+  TITLE_GRID: Run # also here
 
   # IGNORE_BEFORE_SAVING: True # if you want to ignore some data before saving, set this to True
   IGNORE_START_END_RANGE: 10 # Unit meter
