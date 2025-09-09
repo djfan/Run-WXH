@@ -149,7 +149,7 @@ jobs:
       - name: Run sync Garmin CN script
         if: env.RUN_TYPE == 'garmin_cn'
         run: |
-          python run_page/garmin_sync.py --is-cn --only-run
+          python run_page/garmin_sync.py --only-run --is-cn 
         env:
           GARMIN_SECRET_STRING: ${{ secrets.GARMIN_SECRET_STRING_CN }}
         # make garmin secret string 'python run_page/get_garmin_secret.py ${email} ${password} --is-cn'
@@ -224,9 +224,9 @@ jobs:
           ATHLETE: ${{ env.ATHLETE }}
           MIN_GRID_DISTANCE: ${{ env.MIN_GRID_DISTANCE }}
         run: |
-          python run_page/gen_svg.py --from-db --title "$TITLE" --type github --github-style "align-firstday" --athlete "$ATHLETE" --special-distance 10 --special-distance2 20 --special-color "#FFFF00" --special-color2 "#FF6B6B" --output assets/github.svg --use-localtime --min-distance 0.5 --language zh
-          python run_page/gen_svg.py --from-db --title "$TITLE_GRID" --type grid --athlete "i自在" --output assets/grid.svg --special-color "#FFFF00" --special-color2 "#FF6B6B" --special-distance 10 --special-distance2 20 --use-localtime --min-distance "$MIN_GRID_DISTANCE" --language zh
-          python run_page/gen_svg.py --from-db --year $(date +"%Y") --language zh --title "$(date +"%Y") 跑步" --type github --github-style "align-firstday" --athlete "$ATHLETE" --special-distance 10 --special-distance2 20 --special-color "#FFFF00" --special-color2 "#FF6B6B" --output assets/github_$(date +"%Y").svg --use-localtime --min-distance 0.5
+          python run_page/gen_svg.py --from-db --title "$TITLE" --type github --github-style "align-firstday" --athlete "$ATHLETE" --special-distance 5 --special-distance2 10 --special-color "#FFFF00" --special-color2 "#FF6B6B" --output assets/github.svg --use-localtime --min-distance 0.5 --language zh
+          python run_page/gen_svg.py --from-db --title "$TITLE_GRID" --type grid --athlete "i自在" --output assets/grid.svg --special-color "#FFFF00" --special-color2 "#FF6B6B" --special-distance 5 --special-distance2 10 --use-localtime --min-distance "$MIN_GRID_DISTANCE" --language zh
+          python run_page/gen_svg.py --from-db --year $(date +"%Y") --language zh --title "$(date +"%Y") 跑步" --type github --github-style "align-firstday" --athlete "$ATHLETE" --special-distance 5 --special-distance2 10 --special-color "#FFFF00" --special-color2 "#FF6B6B" --output assets/github_$(date +"%Y").svg --use-localtime --min-distance 0.5
 
       # if you want use the style:the start day of each year always aligns with Monday. please use the following script:
       # python run_page/gen_svg.py --from-db --title "${{ env.TITLE }}" --type github --github-style "align-monday" --athlete "${{ env.ATHLETE }}" --special-distance 10 --special-distance2 20 --special-color yellow --special-color2 red --output assets/github.svg --use-localtime --min-distance 0.5
