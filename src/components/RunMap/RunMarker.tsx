@@ -1,5 +1,6 @@
 import { Marker } from 'react-map-gl'
 import styles from './style.module.css'
+import logoImage from '../../../assets/logo.jpg'
 
 interface IRunMarkerProperties {
   longitude: number
@@ -19,7 +20,7 @@ function RunMarker({
     >
       <div className={styles.markerStart}>
         <img 
-          src="/images/logo.jpg" 
+          src={logoImage}
           alt="Runner" 
           style={{ 
             width: '20px', 
