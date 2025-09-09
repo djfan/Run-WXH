@@ -4,10 +4,12 @@ import garth
 if __name__ == "__main__":
     with open("config.yaml") as f:
         config = yaml.safe_load(f)
+        print(config)
 
     email = config.get("sync", {}).get("garmin", {}).get("email")
     password = config.get("sync", {}).get("garmin", {}).get("password")
     is_cn = config.get("sync", {}).get("garmin", {}).get("is_cn", False)
+    print(email, password, is_cn)
 
     if not email or not password:
         raise Exception("Email or password not found in config.yaml")
