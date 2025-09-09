@@ -19,7 +19,7 @@ function RunMarker({
     >
       <div className={styles.markerStart}>
         <img 
-          src="/assets/logo.jpg" 
+          src="/images/logo.jpg" 
           alt="Runner" 
           style={{ 
             width: '20px', 
