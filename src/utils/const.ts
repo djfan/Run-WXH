@@ -53,7 +53,7 @@ const RICH_TITLE = false;
 const IS_CHINESE = true;
 const USE_ANIMATION_FOR_GRID = false;
 const CHINESE_INFO_MESSAGE = (yearLength: number, year: string): string => {
-  const yearStr = year === 'Total' ? '所有' : ` ${year} `;
+  const yearStr = isYearTotal(year) ? '所有' : ` ${year} `;
   return `记录自己跑步 ${yearLength} 年了，下面列表展示的是${yearStr}的数据`;
 };
 const ENGLISH_INFO_MESSAGE = (yearLength: number, year: string): string =>
@@ -97,6 +97,12 @@ const WEEKLY_TITLE = IS_CHINESE ? '周度' : 'Weekly';
 const DAILY_TITLE = IS_CHINESE ? '日度' : 'Daily';
 const LOCATION_TITLE = IS_CHINESE ? 'Location' : 'Location';
 const HOME_PAGE_TITLE = IS_CHINESE ? '首页' : 'Home';
+const TOTAL_YEAR_LABEL = IS_CHINESE ? '总计' : 'Total';
+
+// Helper function to check if a year string represents "Total"
+const isYearTotal = (year: string): boolean => {
+  return year === 'Total' || year === '总计';
+};
 
 const ACTIVITY_TYPES = {
   RUN_GENERIC_TITLE,
@@ -158,6 +164,8 @@ export {
   ACTIVITY_TYPES,
   ACTIVITY_TOTAL,
   HOME_PAGE_TITLE,
+  TOTAL_YEAR_LABEL,
+  isYearTotal,
 };
 
 const nike = 'rgb(224,237,94)'; // if you want to change the main color, modify this value in src/styles/variables.scss

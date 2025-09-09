@@ -419,7 +419,7 @@ const filterAndSortRuns = (
   sortFunc: (_a: Activity, _b: Activity) => number
 ) => {
   let s = activities;
-  if (item !== 'Total') {
+  if (item !== 'Total' && item !== '总计') {
     s = activities.filter((run) => filterFunc(run, item));
   }
   return s.sort(sortFunc);

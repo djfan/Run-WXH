@@ -9,7 +9,7 @@ import YearsStat from '@/components/YearsStat';
 import useActivities from '@/hooks/useActivities';
 import useSiteMetadata from '@/hooks/useSiteMetadata';
 import { useInterval } from '@/hooks/useInterval';
-import { IS_CHINESE } from '@/utils/const';
+import { IS_CHINESE, isYearTotal, TOTAL_YEAR_LABEL } from '@/utils/const';
 import {
   Activity,
   IViewState,
@@ -181,16 +181,16 @@ const Index = () => {
         });
       }
 
-      if (y === 'Total') {
+      if (isYearTotal(y)) {
         // For "Total", show all activities without year filtering
-        setCurrentFilter({ item: 'Total', func: () => true });
+        setCurrentFilter({ item: TOTAL_YEAR_LABEL, func: () => true });
       } else {
         // For specific years, use year filtering
         changeByItem(y, 'Year', filterYearRuns);
       }
 
       setRunIndex(-1);
-      setTitle(`${y === 'Total' ? 'All Years' : y} Running Heatmap`);
+      setTitle(`${isYearTotal(y) ? 'All Years' : y} Running Heatmap`);
       // Reset single run state when changing filters
       setSingleRunId(null);
       if (window.location.hash) {
@@ -323,7 +323,7 @@ const Index = () => {
   }, [runs, startAnimation]);
 
   useEffect(() => {
-    if (year !== 'Total') {
+    if (!isYearTotal(year)) {
       return;
     }
 

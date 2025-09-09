@@ -5,7 +5,7 @@ import { formatPace } from '@/utils/utils';
 import useHover from '@/hooks/useHover';
 import { yearStats } from '@assets/index';
 import { loadSvgComponent } from '@/utils/svgUtils';
-import { SHOW_ELEVATION_GAIN } from '@/utils/const';
+import { SHOW_ELEVATION_GAIN, isYearTotal } from '@/utils/const';
 
 const YearStat = ({
   year,
@@ -71,7 +71,7 @@ const YearStat = ({
         <Stat value={`${streak} 天`} description=" 连续跑步" />
         {hasHeartRate && <Stat value={avgHeartRate} description=" 平均心率" />}
       </section>
-      {year !== 'Total' && hovered && (
+      {!isYearTotal(year) && hovered && (
         <Suspense fallback="loading...">
           <YearSVG className="year-svg my-4 h-4/6 w-4/6 border-0 p-0" />
         </Suspense>

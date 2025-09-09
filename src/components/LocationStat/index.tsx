@@ -2,6 +2,7 @@ import YearStat from '@/components/YearStat';
 import {
   CHINESE_LOCATION_INFO_MESSAGE_FIRST,
   CHINESE_LOCATION_INFO_MESSAGE_SECOND,
+  TOTAL_YEAR_LABEL,
 } from '@/utils/const';
 import CitiesStat from './CitiesStat';
 import LocationSummary from './LocationSummary';
@@ -35,7 +36,7 @@ const LocationStat = ({
     <LocationSummary />
     <CitiesStat onClick={changeCity} />
     <PeriodStat onClick={changeTitle} />
-    <YearStat year="Total" onClick={changeYear} />
+    <YearStat year={TOTAL_YEAR_LABEL} onClick={changeYear} />
   </div>
 );
 
