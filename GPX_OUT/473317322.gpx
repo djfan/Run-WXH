@@ -1,0 +1,59 @@
+<gpx xmlns:ns3="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns2="http://www.garmin.com/xmlschemas/GpxExtensions/v3" creator="Garmin Connect" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/11.xsd">
+  <extensions>
+<distance>79.28</distance>
+<average_hr>80.0</average_hr>
+<average_speed>0.5699999928474426</average_speed>
+<start_time>2025-04-30T14:15:09+00:00</start_time>
+<end_time>2025-04-30T14:17:28.006000+00:00</end_time>
+<moving_time>30.0</moving_time>
+<elapsed_time>139.006</elapsed_time>
+</extensions>
+<metadata>
+    <link href="connect.garmin.com">
+      <text>Garmin Connect</text>
+    </link>
+    <time>2025-04-30T14:15:09.000Z</time>
+  </metadata>
+  <trk>
+    <name>焦作市 步行</name>
+    <type>walking</type>
+    <trkseg>
+      <trkpt lat="35.21082465536892414093017578125" lon="113.25185746885836124420166015625">
+        <ele>100.8000030517578125</ele>
+        <time>2025-04-30T14:17:18.000Z</time>
+        <extensions>
+          <ns3:TrackPointExtension>
+            <ns3:hr>73</ns3:hr>
+          </ns3:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="35.21084091626107692718505859375" lon="113.25190004892647266387939453125">
+        <ele>101</ele>
+        <time>2025-04-30T14:17:24.000Z</time>
+        <extensions>
+          <ns3:TrackPointExtension>
+            <ns3:hr>71</ns3:hr>
+          </ns3:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="35.2108622901141643524169921875" lon="113.25190834701061248779296875">
+        <ele>101.1999969482421875</ele>
+        <time>2025-04-30T14:17:27.000Z</time>
+        <extensions>
+          <ns3:TrackPointExtension>
+            <ns3:hr>71</ns3:hr>
+          </ns3:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="35.21087058819830417633056640625" lon="113.2519098557531833648681640625">
+        <ele>101.1999969482421875</ele>
+        <time>2025-04-30T14:17:28.000Z</time>
+        <extensions>
+          <ns3:TrackPointExtension>
+            <ns3:hr>71</ns3:hr>
+          </ns3:TrackPointExtension>
+        </extensions>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

@@ -1,0 +1,6 @@
+<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <!-- Clean circular background -->
+  <circle cx="12" cy="12" r="10" fill="#EF4444" stroke="#ffffff" stroke-width="1"/>
+  <!-- Square stop symbol to indicate end -->
+  <rect x="8" y="8" width="8" height="8" rx="1" fill="#ffffff"/>
+</svg>

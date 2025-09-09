@@ -1,0 +1,6 @@
+<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <!-- Clean circular background -->
+  <circle cx="12" cy="12" r="10" fill="#22C55E" stroke="#ffffff" stroke-width="1"/>
+  <!-- Play triangle pointing right to indicate start/direction -->
+  <path d="M9 7l6 5-6 5V7z" fill="#ffffff"/>
+</svg>

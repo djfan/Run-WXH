@@ -1,0 +1,49 @@
+# Chinese (Simplified) translation for gpxposter
+# Copyright (C) 2023 gpxtrackposter
+# This file is distributed under the same license as the gpxtrackposter package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gpxtrackposter\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-01 12:00+0000\n"
+"PO-Revision-Date: 2023-01-01 12:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Chinese (Simplified)\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "MY TRACKS"
+msgstr "我的轨迹"
+
+msgid "Runner"
+msgstr "跑者"
+
+msgid "SPECIAL TRACKS"
+msgstr "特殊轨迹"
+
+msgid "STATISTICS"
+msgstr "统计"
+
+msgid "Number"
+msgstr "数量"
+
+msgid "Weekly"
+msgstr "每周"
+
+msgid "Total"
+msgstr "总计"
+
+msgid "Avg"
+msgstr "平均"
+
+msgid "Min"
+msgstr "最短"
+
+msgid "Max"
+msgstr "最长"
+
+msgid "Over"
+msgstr "超过"
