@@ -50,9 +50,9 @@ env:
   BIRTHDAY_MONTH: 1968-11 # If you want to generate the month of life, set it to your birthday month, format is YYYY-MM
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write  # 允许推送更新
+  pages: write     # 允许部署GitHub Pages
+  id-token: write  # 允许OIDC身份验证
 
 jobs:
   sync:
