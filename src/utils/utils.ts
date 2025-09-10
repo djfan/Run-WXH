@@ -484,10 +484,28 @@ const getMapTheme = (): string => {
 
 // Filter activities with GPS tracks (exclude activities without summary_polyline)
 const filterActivitiesWithTracks = (activities: Activity[]): Activity[] => {
+  const startDate = new Date('2025-04-16');
+  
   return activities.filter(
-    (activity) =>
-      activity.summary_polyline !== null &&
-      activity.summary_polyline !== undefined
+    (activity) => {
+      // Only include running activities
+      if (activity.type !== 'Run') {
+        return false;
+      }
+      
+      // Only include activities with GPS tracks
+      if (!activity.summary_polyline) {
+        return false;
+      }
+      
+      // Only include activities from 2025-04-16 onwards
+      const activityDate = new Date(activity.start_date_local);
+      if (activityDate < startDate) {
+        return false;
+      }
+      
+      return true;
+    }
   );
 };
 
