@@ -139,7 +139,7 @@ jobs:
       - name: Run sync Garmin script
         if: env.RUN_TYPE == 'garmin'
         run: |
-          python run_page/garmin_sync.py --only-run
+          python run_page/garmin_sync.py --only-run --start-date 2025-07-14
         env:
           GARMIN_SECRET_STRING: ${{ secrets.GARMIN_SECRET_STRING }}
         # make garmin secret string 'python run_page/get_garmin_secret.py ${email} ${password}'
