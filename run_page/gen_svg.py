@@ -247,15 +247,21 @@ def main():
     if args.language:
         current_dir = os.path.dirname(os.path.abspath(__file__))
         locale_dir = os.path.join(current_dir, "locale")
-        
+
         import gettext
+
         try:
-            lang = gettext.translation("gpxposter", localedir=locale_dir, languages=[args.language], fallback=True)
+            lang = gettext.translation(
+                "gpxposter",
+                localedir=locale_dir,
+                languages=[args.language],
+                fallback=True,
+            )
             p.trans = lang.gettext
             print(f"Successfully loaded translations for {args.language}")
         except Exception as e:
             print(f"Could not load translations: {e}")
-    
+
     p.set_language(args.language)
     p.athlete = args.athlete
     if args.title:

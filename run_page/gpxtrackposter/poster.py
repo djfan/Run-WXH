@@ -74,6 +74,7 @@ class Poster:
         # Fall-back to NullTranslations, if the specified language translation cannot be found.
         if language:
             import os
+
             locale_dir = os.path.join(os.path.dirname(__file__), "..", "locale")
             lang = gettext.translation(
                 "gpxposter", localedir=locale_dir, languages=[language], fallback=True
