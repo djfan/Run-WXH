@@ -3,7 +3,6 @@ from config import SQL_FILE
 import sqlalchemy
 from sqlalchemy import text
 from config import GPX_FOLDER, JSON_FILE
-from utils import make_activities_file
 from datetime import datetime
 
 

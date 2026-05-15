@@ -18,7 +18,7 @@ from config import (
     run_map,
 )
 from generator import Generator
-from utils import adjust_time, make_activities_file
+from utils import adjust_time
 
 # logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("nike_sync")
