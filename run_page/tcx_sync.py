@@ -5,7 +5,6 @@ Only the gpx files in GPX_OUT sync
 
 from config import JSON_FILE, SQL_FILE, TCX_FOLDER
 
-
 if __name__ == "__main__":
     print("only sync tcx files in TCX_OUT")
     # Only include running activities

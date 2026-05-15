@@ -6,7 +6,6 @@ Only the gpx files in GPX_OUT sync
 from datetime import datetime
 from config import GPX_FOLDER, JSON_FILE, SQL_FILE
 
-
 if __name__ == "__main__":
     print("only sync gpx files in GPX_OUT")
     # Only include running activities
